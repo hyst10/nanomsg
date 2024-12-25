@@ -37,4 +37,4 @@ jobs:
       uses: softprops/action-gh-release@v2
       if: startsWith(github.ref, 'refs/tags/')
       with:
-        files: 1.zip
+        files: D:\a\nanomsg\nanomsg\build\1.zip
