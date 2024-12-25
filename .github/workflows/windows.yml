@@ -24,8 +24,13 @@ jobs:
       run: |
         cd build
         ctest -C Debug --output-on-failure
-    - name: Zip the Build
-      run: zip -r ${{ secrets.ReleaseZipName }} ./... 
+    
+    - name: Create ZIP file
+      run: |
+        # 导航到你的项目目录（如果需要）
+        cd D:\a\nanomsg\nanomsg\build
+        # 创建一个ZIP文件，包括你想要打包的文件和目录
+        7z a -tzip my_project.zip *
       
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v1
