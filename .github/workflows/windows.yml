@@ -24,6 +24,9 @@ jobs:
       run: |
         cd build
         ctest -C Debug --output-on-failure
+    - name: Zip the Build
+      run: zip -r ${{ secrets.ReleaseZipName }} ./... 
+      
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v1
       if: startsWith(github.ref, 'refs/tags/')
