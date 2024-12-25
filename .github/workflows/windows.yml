@@ -43,5 +43,5 @@ jobs:
         draft: false
         prerelease: false
         files: |
-          my_project.zip
+          D:\a\nanomsg\nanomsg\build\my_project.zip
           LICENSE 
