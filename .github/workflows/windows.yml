@@ -1,5 +1,10 @@
 name: windows
-on: [push, pull_request]
+#on: [push, pull_request]
+on:
+  push:
+    # run only against tags
+    tags:
+      - '*'
 jobs:
 
   build:
