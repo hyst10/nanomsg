@@ -42,5 +42,5 @@ jobs:
         draft: false
         prerelease: false
         files: |
-          ${{ secrets.ReleaseZipName }}.zip
+          my_project.zip
           LICENSE 
