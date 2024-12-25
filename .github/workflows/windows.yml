@@ -31,6 +31,7 @@ jobs:
         cd D:\a\nanomsg\nanomsg\build
         # 创建一个ZIP文件，包括你想要打包的文件和目录
         7z a -tzip my_project.zip *
+        dir 
       
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v1
