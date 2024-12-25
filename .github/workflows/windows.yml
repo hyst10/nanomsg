@@ -32,15 +32,8 @@ jobs:
         # 创建一个ZIP文件，包括你想要打包的文件和目录
         7z a -tzip my_project.zip *
       
-    - name: Create Release and Upload Release Asset
-      uses: softprops/action-gh-release@v1
-      if: startsWith(github.ref, 'refs/tags/')
+    - name: Upload ZIP artifact
+      uses: actions/upload-artifact@v2
       with:
-        tag_name: ${{ github.ref }}
-        name: Release ${{ github.ref }}
-        body: TODO New Release.
-        draft: false
-        prerelease: false
-        files: |
-          my_project.zip
-          LICENSE 
+        name: my-project-zip
+        path: D:\a\nanomsg\nanomsg\build\my_project.zip  # 更新为实际的ZIP文件路径
